@@ -129,9 +129,9 @@ boxplot_KIPW <- ggplot(subset(df_long,source=="KIPW"), aes(x = Bandwidth, y = Es
   ylim(-0.8,1.2)+
   geom_hline(yintercept = truevalue, color = "red", linetype=1)+
   scale_x_discrete(labels = bw_name)+
-  theme_bw() + # 使用白色背景
-  theme(panel.border = element_rect(color = "black", fill = NA),  # 设置四周边框为黑色
-        panel.grid = element_blank())  # 隐藏网格线
+  theme_bw() + 
+  theme(panel.border = element_rect(color = "black", fill = NA),  
+        panel.grid = element_blank())  
 boxplot_KIPW
 
 boxplot_KREG <- ggplot(subset(df_long,source=="KREG"), aes(x = Bandwidth, y = Estimates)) +
@@ -141,9 +141,9 @@ boxplot_KREG <- ggplot(subset(df_long,source=="KREG"), aes(x = Bandwidth, y = Es
   ylim(-0.8,1.2)+
   geom_hline(yintercept = truevalue, color = "red", linetype=1)+
   scale_x_discrete(labels = bw_name)+
-  theme_bw() + # 使用白色背景
-  theme(panel.border = element_rect(color = "black", fill = NA),  # 设置四周边框为黑色
-        panel.grid = element_blank())  # 隐藏网格线
+  theme_bw() + 
+  theme(panel.border = element_rect(color = "black", fill = NA),  
+        panel.grid = element_blank())  
 boxplot_KREG
 
 boxplot_KMR <- ggplot(subset(df_long,source=="KMR"), aes(x = Bandwidth, y = Estimates)) +
@@ -153,9 +153,9 @@ boxplot_KMR <- ggplot(subset(df_long,source=="KMR"), aes(x = Bandwidth, y = Esti
   ylim(-0.8,1.2)+
   geom_hline(yintercept = truevalue, color = "red", linetype=1)+
   scale_x_discrete(labels = bw_name)+
-  theme_bw() + # 使用白色背景
-  theme(panel.border = element_rect(color = "black", fill = NA),  # 设置四周边框为黑色
-        panel.grid = element_blank())  # 隐藏网格线
+  theme_bw() + 
+  theme(panel.border = element_rect(color = "black", fill = NA),  
+        panel.grid = element_blank())  
 boxplot_KMR
 
 
@@ -163,12 +163,12 @@ boxplot_KMR
 plt_combined <- grid.arrange( boxplot_KIPW, boxplot_KREG, boxplot_KMR, nrow = 1, ncol = 3)
 
 ggsave(
-  filename = paste0("plt_combined.pdf"), # 保存的文件名称。通过后缀来决定生成什么格式的图片
+  filename = paste0("plt_combined.pdf"), 
   plot = plt_combined,
-  width = 8.5,             # 宽
-  height = 2.5,            # 高
-  units = "in",          # 单位
-  dpi = 300              # 分辨率DPI
+  width = 8.5,  
+  height = 2.5, 
+  units = "in",  
+  dpi = 300   
 )
 
 

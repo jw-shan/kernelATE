@@ -48,35 +48,7 @@
     }
     
     
-    # MyAttach = function(list){  # attach a list to the global environment
-    #     for(i in 1:length(names(list))){
-    #         assign(names(list)[i], list[[i]], envir=.GlobalEnv)
-    #     }
-    # }
-    # 
-    # 
-    # Optimize = function(objective, startpars, thres = 1e-6, max.step = 1000){
-    #     
-    #     Diff = function(x,y) abs(x-y)/(x+thres)
-    #     step = 0;    value.old = diff = thres + 1
-    #     while(diff > thres & value.old > thres & step < max.step){
-    #         step = step + 1
-    #         opt = optim(startpars,objective,control=list(maxit=max.step))
-    #         diff = Diff(opt$value,value.old)
-    #         value.old = opt$value
-    #         startpars = opt$par
-    #         if(MESSAGE & step %% 10 == 0){
-    #             cat("This is the ", step, "th step. The optimum value is ",
-    #                 opt$value," after ",opt$counts[1]," iterations \n",sep="")   
-    #         }
-    #     }
-    #     
-    #     opt = list(par = opt$par, convergence = (step < max.step), 
-    #                value = opt$value)
-    #     return(opt)
-    #     
-    # }
-    # 
+  
     
     
     
