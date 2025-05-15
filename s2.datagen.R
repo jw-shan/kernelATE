@@ -54,12 +54,3 @@ DataGen = function(n,SEED){
 
 
 
-# # ## true ATE
-# N=20000
-# delta<- c(0)
-# for(i in 1:500){
-#  Data<-DataGen(N,100+i)
-#  delta[i]<- mean(Data$delta.true)
-# }
-# mean(delta)
-

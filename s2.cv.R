@@ -1,4 +1,4 @@
-# This function implements cross-validation with the help of "np" packages.
+# This function implements cross-validation using "np" packages.
 
 KSE_CV <- function(X,Y,D,Z,bwt=1){
   n = length(Z)

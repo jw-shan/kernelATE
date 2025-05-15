@@ -1,8 +1,7 @@
 ### Figure 1 and Table 2
 ### in "Kernel estimation of average treatment effects in models with unmeasured confounders"
-### edited by ***
+### edited by Jiawei Shan (jwshan@ruc.edu.cn)
 ### last revised in Nov. 11, 2024
-
 
 rm(list=ls())
 library(parallel)
@@ -12,17 +11,13 @@ library(np)
 library(dplyr)
 library(tidyr)
 
-
-
 source("s2.datagen.R")
 source("s2.cv.R")
-
 
 # Current time
 current_time <- Sys.time()
 print(current_time)
 formatted_time <- format(current_time, "%Y_%m_%d_%H_%M_%S")
-
 
 ## Monto Carlo times and Sample Size###
 seed = 17

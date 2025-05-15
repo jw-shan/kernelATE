@@ -1,6 +1,6 @@
 ### Figure 2 and Table 3
 ### in "Kernel estimation of average treatment effects in models with unmeasured confounders"
-### edited by ***
+### edited by Jiawei Shan (jwshan@ruc.edu.cn)
 ### last revised in Nov. 11, 2024
 ### !!!!! It takes a little longer to run this code !!!!!
 
@@ -19,17 +19,10 @@ current_time <- Sys.time()
 print(current_time)
 formatted_time <- format(current_time, "%Y_%m_%d_%H_%M_%S")
 
-
 ## Monto Carlo setting
 seed = 123
 J = 1000
 numt = c(1000,5000,20000)
-
-
-# print information
-print(paste0("seed=",seed))
-print(DataGen)
-
 
 # Compute truevalue
 N=30000000
@@ -92,7 +85,6 @@ df_long <- gather(combined_df, key = "Size", value = "Bias", -source) %>%
 
 # save data
 save.image("res_s3.rdata")
-# save.image(paste0("res_s3_",formatted_time,".RData"))
 
 
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -233,4 +225,3 @@ print(Sys.time())
 print(Sys.time()-current_time)
 
 
-# source("s3.main.R")

@@ -1,6 +1,6 @@
 ### Table 1
 ### in "Kernel estimation of average treatment effects in models with unmeasured confounders"
-### edited by ***
+### edited by Jiawei Shan (jwshan@ruc.edu.cn)
 ### last revised in Nov. 11, 2024
 
 rm(list=ls())
@@ -14,7 +14,6 @@ source("s1.estimators.R")
 seed = 11
 J <- 500
 N <- 500
-# N <- 1000
 truevalue<- 0.087
 
 # parallel setting
